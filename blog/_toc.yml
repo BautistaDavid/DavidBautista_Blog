@@ -3,7 +3,22 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+  - caption: Python, Functions, objects and more...
+    chapters:
+    - file: python_fundamentals/descriptive_statistics
+      title: Python Class To Get Descriptive Statistics
+    # - file: path/to/part1/chapter2
+   
+
+
+# parts:
+# chapters:
+#   - file: python_fundamentals\descriptive_statistics
+#   - caption: Python. Functions, objects and more.
+#   # - title: Building Descriptive Statistics With Python.
+
+# # chapters:
+# # - file: markdown
+# # - file: notebooks
+# # - file: markdown-notebooks
