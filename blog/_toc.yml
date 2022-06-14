@@ -10,6 +10,10 @@ parts:
       title: Python Class To Get Descriptive Statistics
     - file: python_fundamentals/OLS_regression
       title: OLS Regression with Our Own Python Class
+  
+  - caption: Exploratory Data Analysis  
+    chapters:
+    - file: 
     # - file: path/to/part1/chapter2
    
 
