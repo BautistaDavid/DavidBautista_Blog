@@ -8,6 +8,8 @@ parts:
     chapters:
     - file: python_fundamentals/descriptive_statistics
       title: Python Class To Get Descriptive Statistics
+    - file: python_fundamentals/OLS_regression
+      title: OLS Regression with Our Own Python Class
     # - file: path/to/part1/chapter2
    
 

@@ -54,6 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Stata? I Only Know Python" href="OLS_regression.html" />
     <link rel="prev" title="Welcome To EDP Blog 👽" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -122,7 +123,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Building
+   Python Class To Get Descriptive Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OLS_regression.html">
+   OLS Regression with Our Own Python Class
   </a>
  </li>
 </ul>
@@ -341,6 +347,16 @@ title="Print to PDF"
    Let’s Test The Class
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods-or-attributes">
+   Methods or Attributes…
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-conclusions">
+   Some Conclusions
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -370,6 +386,16 @@ title="Print to PDF"
    Let’s Test The Class
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods-or-attributes">
+   Methods or Attributes…
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-conclusions">
+   Some Conclusions
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -380,13 +406,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="python-class-to-get-descriptive-statistics">
+  <p><a href="https://colab.research.google.com/github/BautistaDavid/DavidBautista_Blog/blob/main/blog/python_fundamentals/descriptive_statistics.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<section id="python-class-to-get-descriptive-statistics">
 <h1>Python Class To Get Descriptive Statistics<a class="headerlink" href="#python-class-to-get-descriptive-statistics" title="Permalink to this headline">#</a></h1>
 <p><span style="font-family: Helvetica;"> I'm going to create a python class that allows us to reference an object and that its attributes are information related to the main descriptive statistics of a sample of n observations. This is an easy exercise to identify how the logic of classes, objects, functions and attributes works in python. </span></p>
 <p><span style="font-family: Helvetica;">First of all it is important to identify the formulas of all the descriptive statistics that we are going to build in code using python. It is also important to say that <span style="color: rgb(220, 25, 27);"> the main idea of this exercise is not to use any pre-existing Python modules.</span></span></p>
 <section id="what-are-we-going-to-calculate">
 <h2>What Are We Going To Calculate?<a class="headerlink" href="#what-are-we-going-to-calculate" title="Permalink to this headline">#</a></h2>
-<p>Let’s compute the following basic descriptive statistics: the mean, standard deviation, variance, median, kurtosis, skewness, and coefficient of variation. The formulas for those descriptive statistics are as follows:</p>
+<p><span style="font-family: Helvetica;">Let's compute the following basic descriptive statistics: the mean, standard deviation, variance, median, kurtosis, skewness, and coefficient of variation. The formulas for those descriptive statistics are as follows:</span></p>
 <p><strong>Mean:</strong></p>
 <div class="math notranslate nohighlight">
 \[\bar{x} = \frac{\sum_{i=1}^{n} x_{i}}{n}\]</div>
@@ -405,8 +432,7 @@ title="Print to PDF"
 <p><strong>Coefficient of Variation:</strong></p>
 <div class="math notranslate nohighlight">
 \[Cv = \frac{\sigma}{|\bar{x}|}\]</div>
-<p>Now that we have the formulas of what we want to calculate, we simply have to set up the class and start creating methods for each statistic, even though we could also generate them as attributes of the object.</p>
-<div class="cell docutils container">
+<p><span style="font-family: Helvetica;">Now that we have the formulas of what we want to calculate, we simply have to set up the class and start creating methods for each statistic, even though we could also generate them as attributes of the object.</span></p><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">statistics</span><span class="p">:</span>
   
@@ -442,8 +468,7 @@ title="Print to PDF"
 </section>
 <section id="let-s-test-the-class">
 <h2>Let’s Test The Class<a class="headerlink" href="#let-s-test-the-class" title="Permalink to this headline">#</a></h2>
-<p>That’s it, our class has different methods that allow the object to calculate each statistic, let’s try it!. To test our class we are going to generate a normal distribution using <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, which has approximately mean 10, standard deviation 2.5 and with <span class="math notranslate nohighlight">\(n\)</span> equal to 100</p>
-<div class="cell docutils container">
+<p><span style="font-family: Helvetica;">That's it, our class has different methods that allow the object to calculate each statistic, let's try it!. To test our class we are going to generate a normal distribution using numpy, which has approximately mean 10, standard deviation 2.5 and with n equal to 100</span></p><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="c1"># Let&#39;s create the array</span>
@@ -462,69 +487,96 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean = 9.938060881367369
-Standard Deviation = 2.487317462398744
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean = 9.91483162901171
+Standard Deviation = 2.474039077505662
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Variance = 6.186748158753728
-Median = 9.917883502367133
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Variance = 6.120869357025068
+Median = 10.004512293667428
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kurtosis = 2.9994956095511145
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kurtosis = 3.1426859546308448
+Skewness = -0.013361773256688312
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Skewness = 0.056453504255115014
-Coefficient of Variation = 0.2502819707073999
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coefficient of Variation = 0.24952910650206062
+</pre></div>
+</div>
+</div>
+</div>
+<p><span style="font-family: Helvetica;">Now that we know some descriptive statistics of this sample we can additionally visualize a BoxPlot of the sample</span></p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;BoxPlot Sample&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">lst</span><span class="p">,</span><span class="n">palette</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">my_object</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mean&#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/descriptive_statistics_6_0.png" src="../_images/descriptive_statistics_6_0.png" />
+</div>
+</div>
+</section>
+<section id="methods-or-attributes">
+<h2>Methods or Attributes…<a class="headerlink" href="#methods-or-attributes" title="Permalink to this headline">#</a></h2>
+<p><span style="font-family: Helvetica;">Now we are going to build the same class but we change things a bit... The idea now is that each descriptive statistic is configured as an attribute of the object and not as a method</span></p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">statistics</span><span class="p">:</span>
+  
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lst</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">lst</span> <span class="o">=</span> <span class="n">lst</span>
+    <span class="c1"># Let&#39;s create more attributes </span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">mean</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">stand_dev</span> <span class="o">=</span> <span class="p">(</span><span class="nb">sum</span><span class="p">([(</span><span class="n">i</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span>  
+    <span class="bp">self</span><span class="o">.</span><span class="n">variance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stand_dev</span><span class="o">**</span><span class="mi">2</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">median</span> <span class="o">=</span> <span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">%</span><span class="k">2</span> != 0 
+            <span class="k">else</span> <span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">kurtosis</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([(</span><span class="n">i</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">stand_dev</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">skewness</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([(</span><span class="n">i</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">stand_dev</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> 
+    <span class="bp">self</span><span class="o">.</span><span class="n">coeff_variation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stand_dev</span> <span class="o">/</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
+
+  <span class="c1"># Now let&#39;s create a summarize method </span>
+  <span class="k">def</span> <span class="nf">summarize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Mean = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Standard Deviation = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">stand_dev</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Variance = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">variance</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Median = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">median</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Kurtosis = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">kurtosis</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Skewness = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">skewness</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Coefficient of Variation = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">coeff_variation</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+  
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Histogram Array&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_object</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="n">my_object</span><span class="o">.</span><span class="n">summarize</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/descriptive_statistics_4_0.png" src="../_images/descriptive_statistics_4_0.png" />
-</div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="k">class</span> <span class="nc">statistics</span><span class="p">:</span>
-  
-  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lst</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">lst</span> <span class="o">=</span> <span class="n">lst</span>
-    <span class="k">return</span> <span class="kc">None</span>
-
-  <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
-    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span>
-  
-  <span class="k">def</span> <span class="nf">stand_dev</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="nb">sum</span><span class="p">([(</span><span class="n">i</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span>  
-
-  <span class="k">def</span> <span class="nf">variance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stand_dev</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span>
-
-  <span class="k">def</span> <span class="nf">median</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> 
-            <span class="k">else</span> <span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-  
-  <span class="k">def</span> <span class="nf">kurtosis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span>  <span class="nb">sum</span><span class="p">([(</span><span class="n">i</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">**</span><span class="mi">4</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">stand_dev</span><span class="p">()</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
-
-  <span class="k">def</span> <span class="nf">Skewness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span>  <span class="nb">sum</span><span class="p">([(</span><span class="n">i</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">stand_dev</span><span class="p">()</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
-  
-  <span class="k">def</span> <span class="nf">coeff_variation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stand_dev</span><span class="p">()</span> <span class="o">/</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean = 9.91483162901171
+Standard Deviation = 2.474039077505662
+Variance = 6.120869357025068
+Median = 10.004512293667428
+Kurtosis = 3.1426859546308448
+Skewness = -0.013361773256688312
+Coefficient of Variation = 0.24952910650206062
 </pre></div>
 </div>
+</div>
+</div>
 </section>
+<section id="some-conclusions">
+<h2>Some Conclusions<a class="headerlink" href="#some-conclusions" title="Permalink to this headline">#</a></h2>
+<p><span style="font-family: Helvetica;">Understanding the differences between concepts such as methods and attributes is important if you want to start building more complex classes and packages. Both methods and attributes have their special features and can be used in certain ways. I invite you to think and create classes with python for any kind of thing that comes to mind.</span></p></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -560,6 +612,13 @@ Coefficient of Variation = 0.2502819707073999
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Welcome To EDP Blog 👽</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="OLS_regression.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Stata? I Only Know Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
