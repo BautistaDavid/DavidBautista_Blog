@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Python, Functions, objects and more...
+  - caption: Python. Functions, objects and more...
     chapters:
     - file: python_fundamentals/descriptive_statistics
       title: Python Class To Get Descriptive Statistics
@@ -13,7 +13,12 @@ parts:
   
   - caption: Exploratory Data Analysis  
     chapters:
-    - file: 
+    - file: EDA/airbnb_new_york
+      title: EDA Airbnb New York
+    # - file: EDA/
+
+
+    
     # - file: path/to/part1/chapter2
    
 

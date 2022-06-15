@@ -114,3 +114,5 @@ reg.summary # Using summary attribute
 # ### Some Conclusions ...
 # 
 # The main conclusion that stands out from this project is that the open source philosophy and technologies allow us to develop thousands of ideas, codes and applications that some companies would sell. In my case I have the Stata17 license because my university pays for it, however using python I was able to replicate one of the most popular outputs for students of basic econometrics courses.
+
+# 
