@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # COMMERCIAL RELATIONS OF COLOMBIA IN THE LAST 20 YEARS
+# # Commercial Relations Of Colombia In The Last 20 Years
 
 # The main idea of ​​this notebook is to explore in a fast way the develop of the commercial relations of colombia during the las 20 years using python tools. 
 # 
