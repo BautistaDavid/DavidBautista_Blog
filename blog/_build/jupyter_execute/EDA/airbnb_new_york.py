@@ -3,7 +3,7 @@
 
 # <a href="https://colab.research.google.com/github/BautistaDavid/DavidBautista_Blog/blob/main/blog/EDA/airbnb_new_york.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-# # **Exploring New York city Airbnb Data**
+# # Exploring New York city Airbnb Data
 # 
 # We are going to carry out an exploratory data analysis of some data from the company Airbnb available in [Kaggle](https://www.kaggle.com/code/dgomonov/data-exploration-on-nyc-airbnb/data). This analysis will have different sections that will allow us to understand how the data is composed, correct some problems around them and after this a statistical analysis and also a visualization. You can visit this project and more in my github repository [Machine-Learning-Class-2022](https://github.com/BautistaDavid/Machine-Learning-Class-2022).
 
@@ -325,7 +325,7 @@ def droping_duplicates_abnbs(distance):
 # data.to_csv('abnb_data.csv')
 
 
-# ## Time for Data Visualization
+# ## Time For Data Visualization
 
 # Next we are going to structure a data visualization divided into univariate, bivariate and multivariate visualization. However, before **we can reapply the idea of the mahalanobis distance and univariate outliers to our data**, since these are different because of the modification we just made.
 
