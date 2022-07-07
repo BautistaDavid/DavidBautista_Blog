@@ -17,7 +17,12 @@ parts:
       title: EDA Airbnb New York
     - file: EDA/Exports_and_Imports
       title: EDA Exports And Imports Colombia 
-    # - file: EDA/
+
+  - caption: Exploring Cool Python Modules
+    chapters:
+    - file: notebooks_cool_pymodules/plotly_estadistica_delictiva
+      title: Crime Statistics Maps With Plotly
+
 
 
     
