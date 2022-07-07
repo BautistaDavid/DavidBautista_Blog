@@ -3,7 +3,7 @@
 
 # # Exploring Criminalistic Colombian Data with plotly
 # 
-# In this notebook we are going to explore some graphing functions of plotly. For this we will use data from homicides registered in Colombia by the national police [national police](https://www.policia.gov.co/grupo-informacion-criminalidad/estadistica-delictiva). 
+# In this notebook we are going to explore some graphing functions of plotly. For this we will use data from homicides registered in Colombia by the [national police](https://www.policia.gov.co/grupo-informacion-criminalidad/estadistica-delictiva). 
 # 
 # 
 # First we will need to clean the data so that it matches the info from the .json polygon data. After this, plotly will be used to graph the map with the different frequencies of homicides by region in Colombia.
