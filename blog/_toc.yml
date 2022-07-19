@@ -23,9 +23,10 @@ parts:
     - file: notebooks_cool_pymodules/plotly_estadistica_delictiva
       title: Crime Statistics Maps With Plotly
   
-  # - caption: Data Modeling ... 
-    # chapters:
-    # - file: 
+  - caption: Twitter Posts (Spanish) 
+    chapters:
+    - file: twitter_posts/gif_scatterplot_notebook
+      title: Crendo Un GIF De Un ScatterPlot 
 
 
 
