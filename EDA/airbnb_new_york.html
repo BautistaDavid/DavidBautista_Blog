@@ -162,13 +162,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Data Modeling
+  Twitter Posts (Spanish)
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../data_modeling/SVM_soccer_teams.html">
-   Support Vector Machines - Equipos de futbol Clasificados
+  <a class="reference internal" href="../twitter_posts/gif_scatterplot_notebook.html">
+   Crendo Un GIF De Un ScatterPlot
   </a>
  </li>
 </ul>
@@ -1648,29 +1648,6 @@ memory usage: 3.6+ MB
 
 <span class="n">abnb_data</span><span class="p">[</span><span class="s1">&#39;mahal_distances&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mahal_distances</span> 
 <span class="n">abnb_data</span><span class="p">[</span><span class="s1">&#39;p_value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">chi2</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">abnb_data</span><span class="p">[</span><span class="s1">&#39;mahal_distances&#39;</span><span class="p">],</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [19],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">mahal_distances</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">abnb_numerical</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">():</span>
-<span class="ne">----&gt; </span><span class="mi">4</span>   <span class="n">mahal_distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mahalanobis</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">abnb_numerical</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">abnb_numerical</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">T</span><span class="p">))))</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">k</span> <span class="o">=</span> <span class="n">abnb_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">abnb_data</span><span class="p">[</span><span class="s1">&#39;mahal_distances&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mahal_distances</span> 
-
-<span class="nn">File &lt;__array_function__ internals&gt;:180,</span> in <span class="ni">cov</span><span class="nt">(*args, **kwargs)</span>
-
-<span class="nn">File c:\users\dfbb2\desktop\davidbautista_blog\venv\lib\site-packages\numpy\lib\function_base.py:2606,</span> in <span class="ni">cov</span><span class="nt">(m, y, rowvar, bias, ddof, fweights, aweights, dtype)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2603</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2604</span>         <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2606</span> <span class="n">X</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ndmin</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2607</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">rowvar</span> <span class="ow">and</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2608</span>     <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
